@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 result = num1 * num2;
                 break;
             case '/':
-                if (num2 === 0) {
+                if (Math.abs(num2) < Number.EPSILON) {
                     errorMessage = 'Ошибка: деление на ноль';
                 } else {
                     result = num1 / num2;
